@@ -38,12 +38,13 @@ docker compose down -v
 
 ### Execute!
 
-Production database credentials are not stored in this repo. Create a file named `.env.prod.db` in the project root. Its values must match the `DATABASE_URL` line of `.env.prod`, which has the form `postgresql://USER:PASSWORD@db:5000/DATABASE_NAME`:
+Production database credentials are not stored in this repo. Create a file named `.env.prod.db` in the project root, filling in your own username, password, and database name:
 
 ```
 POSTGRES_USER=<user>
 POSTGRES_PASSWORD=<password>
 POSTGRES_DB=<database name>
+DATABASE_URL=postgresql://<user>:<password>@db:5432/<database name>
 ```
 
 Build and start the services, then create the database table:
