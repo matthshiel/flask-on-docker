@@ -12,6 +12,16 @@ This repo is a containerized Flask website that is dependent on a Postgres datab
 
 ### Setup
 
+You need [Docker](https://docs.docker.com/get-docker/) with the Compose plugin installed. Then download the code:
+
+```
+git clone https://github.com/matthshiel/flask-on-docker.git
+cd flask-on-docker
+```
+
+All commands below are run from this folder. If port 1145 is already in use on your machine, change the first number in the `ports:` line of the compose file.
+
+
 Build and start the services:
 
 ```
@@ -28,7 +38,7 @@ docker compose down -v
 
 ### Execute!
 
-Production database credentials are not stored in this repo. Create a file named `.env.prod.db` in the project root, with values matching the user, password, and database name in the `DATABASE_URL` line of `.env.prod`:
+Production database credentials are not stored in this repo. Create a file named `.env.prod.db` in the project root. Its values must match the `DATABASE_URL` line of `.env.prod`, which has the form `postgresql://USER:PASSWORD@db:5000/DATABASE_NAME`:
 
 ```
 POSTGRES_USER=<user>
