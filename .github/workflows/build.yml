@@ -1,0 +1,17 @@
+name: build
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and start the development services
+        run: docker compose up -d --build
+      - name: Check that the web page responds
+        run: curl --fail --retry 10 --retry-delay 3 --retry-all-errors http://localhost:1145/
