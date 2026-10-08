@@ -4,13 +4,13 @@
 
 ## Overview
 
-This repo is a containerized Flask website that is dependant on a Postgres database. We used Flask and Gurnicorn in order to run the basic functions of this tool. In order to handle all of the requests, we used Nginx as a doorstop that execute basic functions or refer more complex tasks to Flask and Gurnicon. The app supports uploading an image and viewing it in the browser, as shown below.
+This repo is a containerized Flask website that is dependent on a Postgres database, which stores all necessary data. We used Flask and Gurnicorn in order to run the basic functions of this tool. In order to handle all of the requests, we used Nginx as a doorstop that execute basic functions or refer more complex tasks to Flask and Gurnicon. The app supports uploading an image and viewing it in the browser, as shown below.
 
 ![Demo of built webpage](Animation.gif)
 
 ## Build Instructions
 
-### First steps
+### Setup
 
 Build and start the services:
 
